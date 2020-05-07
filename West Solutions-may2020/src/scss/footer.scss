@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@900&family=Raleway:wght@400;600&display=swap");
+
+@mixin playfair_text {
+    font-family: "Playfair Display SC", serif;
+    font-style: normal;
+    font-weight: 900;
+}
+
+@mixin raleway_text {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+footer {
+    padding-top: 40px;
+    .footer__nav {
+        padding: 20px 0 10px 0;
+        border-top: 1px solid #89898b;
+        border-bottom: 1px solid #89898b;
+    }
+    .footer__address {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__text {
+            padding: 20px 0;
+            @include raleway_text;
+            font-size: 13px;
+            line-height: 15px;
+            letter-spacing: 0.01em;
+            color: #89898b;
+            &--link {
+                text-decoration: none;
+            }
+        }
+        &__contacts {
+            width: 60px;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &__link {
+                width: 15px;
+                height: 15px;
+                display: block;
+                &--fbook {
+                    background: url(../img/contact/fbook.svg);
+                    background-size: cover;
+                }
+                &--insta {
+                    background: url(../img/contact/insta.svg);
+                    background-size: cover;
+                }
+            }
+            &__link:hover {
+                background-position: 0 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .footer__address {
+        flex-direction: column;
+        &__text {
+            padding-bottom: 0 !important;
+        }
+    }
+}

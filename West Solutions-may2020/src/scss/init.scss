@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@900&family=Raleway:wght@400;600&display=swap");
+
+@mixin playfair_text {
+    font-family: "Playfair Display SC", serif;
+    font-style: normal;
+    font-weight: 900;
+}
+
+@mixin raleway_text {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    background-color: #1d1c21;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.rd_more__link {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    @include raleway_text;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: #f6f6f6;
+    text-transform: lowercase;
+}
+.rd_more__img {
+    width: 12px;
+    height: 13px;
+    object-fit: cover;
+    border: 0;
+    object-position: 0 0;
+    &--upload {
+        width: 5px;
+        height: 13px;
+    }
+}
+.but_cont_us {
+    width: 180px;
+    height: 48px;
+    padding: 15px 25px;
+    @include raleway_text;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: #d8d8d9;
+    border: 2px solid #d8d8d9;
+    &__plus {
+        @include raleway_text;
+        font-size: 34px;
+        line-height: 40px;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: #d8d8d9;
+    }
+}

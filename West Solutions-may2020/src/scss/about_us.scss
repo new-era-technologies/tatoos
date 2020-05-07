@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@900&family=Raleway:wght@400;600&display=swap");
+
+@mixin playfair_text {
+    font-family: "Playfair Display SC", serif;
+    font-style: normal;
+    font-weight: 900;
+}
+
+@mixin raleway_text {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.about_us {
+    background: url(../img/about_us/about_us_bg.svg);
+    background-size: cover;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &__text_box {
+            &__title {
+                margin-top: 80px;
+                margin-bottom: 20px;
+                @include playfair_text;
+                font-size: 61px;
+                line-height: 81px;
+                color: #89898b;
+            }
+            &__text {
+                max-width: 420px;
+                margin-bottom: 80px;
+                @include raleway_text;
+                font-size: 15px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                text-align: justify;
+                color: #1d1c21;
+            }
+        }
+        &__img {
+            width: 50%;
+            margin-left: 30px;
+            transform: scale(1.15);
+            transform-origin: right;
+        }
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .about_us {
+        &__inner {
+            flex-direction: column;
+            &__text_box {
+                &__title {
+                    font-size: 35px;
+                    line-height: 40px;
+                }
+                &__text {
+                    max-width: 100%;
+                }
+            }
+            &__img {
+                width: 100%;
+                margin-left: 0;
+                transform-origin: 50% 50% 0;
+            }
+        }
+    }
+}

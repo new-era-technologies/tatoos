@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@900&family=Raleway:wght@400;600&display=swap");
+
+@mixin playfair_text {
+    font-family: "Playfair Display SC", serif;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.featured_works {
+    padding: 90px 0;
+    &__title {
+        margin-right: 125px;
+        display: inline;
+        @include playfair_text;
+        font-size: 61px;
+        line-height: 81px;
+        color: #89898b;
+    }
+    &__link {
+        margin-top: 50px;
+        float: right;
+        &__img {
+            margin-left: 10px;
+        }
+    }
+    &__text {
+        padding-top: 25px;
+        @include playfair_text;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: #f6f6f6;
+        clear: both;
+    }
+    .grid {
+        margin-top: 0;
+    }
+    .grid-sizer {
+        width: 25%;
+    }
+    .grid-item {
+        width: 25%;
+        height: 0;
+        float: left;
+        padding-top: 15%;
+        padding-bottom: 25%;
+        overflow: hidden;
+    }
+    .grid-item--height2 {
+        height: 40%;
+        padding-top: 0;
+        padding-bottom: 40%;
+    }
+    .grid-item > img {
+        width: 100%;
+        margin: 5px;
+        border: 0;
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .featured_works {
+        &__title {
+            font-size: 35px;
+            line-height: 40px;
+        }
+        &__text {
+            font-size: 17px;
+            line-height: 20px;
+        }
+    }
+}

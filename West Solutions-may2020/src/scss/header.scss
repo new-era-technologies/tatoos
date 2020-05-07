@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@900&family=Raleway:wght@400;600&display=swap");
+
+@mixin playfair_text {
+    font-family: "Playfair Display SC", serif;
+    font-style: normal;
+    font-weight: 900;
+}
+
+@mixin raleway_text {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+header {
+    width: 100%;
+    min-height: 100vh;
+    padding: 37px 0;
+    background-image: url(../img/header/header_bg.svg);
+    background-size: cover;
+    position: relative;
+    .header__nav {
+        border-bottom: 1px solid #89898b;
+    }
+    .header__icons {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        &__logo > img {
+            margin-top: -7px;
+            margin-left: -10px;
+        }
+        &__contacts {
+            height: 68px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            &__link {
+                width: 24px;
+                height: 24px;
+                display: block;
+                &--fbook {
+                    background: url(../img/contact/fbook.svg);
+                    background-size: cover;
+                }
+                &--insta {
+                    background: url(../img/contact/insta.svg);
+                    background-size: cover;
+                }
+            }
+            &__link:hover {
+                background-position: 0 24px;
+            }
+        }
+    }
+    .header__inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .header__tatoos {
+        width: 274px;
+        margin: 0 auto;
+    }
+    .header__tatoos > img {
+       width: 100%;
+    }
+    .header__title {
+        @include playfair_text;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        text-align: center;
+        color: #ffffff;
+    }
+    .header__but {
+        margin: 60px auto;
+        text-decoration: none;
+    }
+}
+
+// media queries only for 2 kidns of screen, just for example
+
+@media only screen and (max-width: 1279px) {
+    .header__inner {
+        position: static !important;
+        transform: translate(0, 0) !important;
+    }
+    .header__tatoos {
+        width: 240px !important;
+    }
+    .header__but {
+        margin: 30px auto !important;
+    }
+}

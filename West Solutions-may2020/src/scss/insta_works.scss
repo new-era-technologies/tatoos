@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@900&family=Raleway:wght@400;600&display=swap");
+
+@mixin playfair_text {
+    font-family: "Playfair Display SC", serif;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.insta_works {
+    padding: 60px 0;
+    &__title {
+        @include playfair_text;
+        font-size: 61px;
+        line-height: 81px;
+        color: #89898b;
+        text-align: center;
+    }
+    &__link {
+        margin: 30px auto 0 auto;
+        &__img {
+            margin-left: 7px;
+        }
+    }
+    .grid {
+        width: 100%;
+        margin-top: 24px;
+    }
+    .grid-sizer {
+        width: 20%;
+    }
+    .grid-item {
+        width: 20%;
+        height: 0;
+        float: left;
+        padding-bottom: 20%;
+        overflow: hidden;
+    }
+    .grid-item > a {
+        display: block;
+    }
+    .grid-item > a > img {
+        width: 100%;
+        margin: 5px;
+        border: 0;
+    }
+    .grid-item--width2 {
+        width: 40%;
+        padding-bottom: 40%;
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .insta_works__title {
+        font-size: 35px;
+        line-height: 40px;
+    }
+}
